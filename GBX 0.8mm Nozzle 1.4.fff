@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="GBX 0.8mm Nozzle 1.4" version="2021-05-05 15:36:47" app="S3D-Software 4.1.2">
+<profile name="GBX 0.8mm Nozzle 1.4" version="2021-05-05 16:30:50" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
   <printMaterial>Ultrafuse - rPET</printMaterial>
   <printQuality>Standard Resolution</printQuality>
@@ -102,7 +102,7 @@
     <temperatureNumber>2</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="180"/>
+    <setpoint layer="1" temperature="175"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
@@ -301,7 +301,7 @@
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>1</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="100"/>
+      <setpoint layer="1" temperature="115"/>
     </temperatureController>
     <defaultSpeed>3600</defaultSpeed>
     <startingGcode>M92 X106.67 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E85 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
@@ -356,7 +356,7 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="180"/>
+      <setpoint layer="1" temperature="175"/>
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
