@@ -26,9 +26,9 @@
   <bottomSolidLayers>2</bottomSolidLayers>
   <perimeterOutlines>1</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
-  <startPointOption>2</startPointOption>
-  <startPointOriginX>0</startPointOriginX>
-  <startPointOriginY>0</startPointOriginY>
+  <startPointOption>3</startPointOption>
+  <startPointOriginX>450</startPointOriginX>
+  <startPointOriginY>900</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
