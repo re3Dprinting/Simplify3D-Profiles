@@ -6,9 +6,9 @@
   <printExtruders>Pellet Extruders</printExtruders>
   <extruder name="Pellet Extruder">
     <toolheadNumber>0</toolheadNumber>
-    <diameter>0.8</diameter>
+    <diameter>1.75</diameter>
     <autoWidth>1</autoWidth>
-    <width>0.96</width>
+    <width>2.1</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>0</retractionDistance>
@@ -21,7 +21,7 @@
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.6033</layerHeight>
+  <layerHeight>1</layerHeight>
   <topSolidLayers>4</topSolidLayers>
   <bottomSolidLayers>2</bottomSolidLayers>
   <perimeterOutlines>1</perimeterOutlines>
@@ -222,9 +222,9 @@
   <autoConfigureMaterial name="re:3D - PLA">
     <extruder name="Pellet Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.8</diameter>
+      <diameter>1.75</diameter>
       <autoWidth>1</autoWidth>
-      <width>0.96</width>
+      <width>2.1</width>
       <extrusionMultiplier>1</extrusionMultiplier>
       <useRetract>1</useRetract>
       <retractionDistance>0</retractionDistance>
@@ -266,9 +266,9 @@
   <autoConfigureMaterial name="re:3D - PC">
     <extruder name="Pellet Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.8</diameter>
+      <diameter>1.75</diameter>
       <autoWidth>1</autoWidth>
-      <width>0.96</width>
+      <width>2.1</width>
       <extrusionMultiplier>1</extrusionMultiplier>
       <useRetract>1</useRetract>
       <retractionDistance>0</retractionDistance>
@@ -308,7 +308,7 @@
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Higher Resolution">
-    <layerHeight>0.3175</layerHeight>
+    <layerHeight>0.6033</layerHeight>
     <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <infillPercentage>10</infillPercentage>
@@ -327,9 +327,9 @@
   <autoConfigureMaterial name="Ultrafuse - rPET">
     <extruder name="Pellet Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.8</diameter>
+      <diameter>1.75</diameter>
       <autoWidth>1</autoWidth>
-      <width>0.96</width>
+      <width>2.1</width>
       <extrusionMultiplier>1</extrusionMultiplier>
       <useRetract>1</useRetract>
       <retractionDistance>0</retractionDistance>
@@ -369,7 +369,7 @@
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution">
-    <layerHeight>0.6033</layerHeight>
+    <layerHeight>1</layerHeight>
     <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>2</bottomSolidLayers>
     <infillPercentage>10</infillPercentage>
