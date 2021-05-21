@@ -90,13 +90,13 @@
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="220"/>
+    <setpoint layer="1" temperature="225"/>
   </temperatureController>
   <temperatureController name="Middle Heat Zone">
     <temperatureNumber>1</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="215"/>
+    <setpoint layer="1" temperature="220"/>
   </temperatureController>
   <temperatureController name="Top Heat Zone">
     <temperatureNumber>2</temperatureNumber>
@@ -345,13 +345,13 @@
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="220"/>
+      <setpoint layer="1" temperature="225"/>
     </temperatureController>
     <temperatureController name="Middle Heat Zone">
       <temperatureNumber>1</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="215"/>
+      <setpoint layer="1" temperature="220"/>
     </temperatureController>
     <temperatureController name="Top Heat Zone">
       <temperatureNumber>2</temperatureNumber>
