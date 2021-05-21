@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>10</infillPercentage>
+  <infillPercentage>15</infillPercentage>
   <outlineOverlapPercentage>25</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -311,7 +311,7 @@
     <layerHeight>0.6033</layerHeight>
     <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
-    <infillPercentage>10</infillPercentage>
+    <infillPercentage>15</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
     <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
@@ -372,7 +372,7 @@
     <layerHeight>1</layerHeight>
     <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>2</bottomSolidLayers>
-    <infillPercentage>10</infillPercentage>
+    <infillPercentage>15</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
     <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
