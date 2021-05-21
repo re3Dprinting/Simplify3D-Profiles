@@ -163,7 +163,7 @@
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
   <postProcessing>{REPLACE &quot;; layer&quot; &quot;M117 Layer&quot;},{REPLACE &quot; Z = &quot; &quot; Z=&quot;},</postProcessing>
-  <defaultSpeed>3600</defaultSpeed>
+  <defaultSpeed>1800</defaultSpeed>
   <outlineUnderspeed>1</outlineUnderspeed>
   <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
   <supportUnderspeed>0.9</supportUnderspeed>
@@ -260,7 +260,7 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
-    <defaultSpeed>3600</defaultSpeed>
+    <defaultSpeed>1800</defaultSpeed>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="re:3D - PC">
@@ -304,7 +304,7 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="115"/>
     </temperatureController>
-    <defaultSpeed>3600</defaultSpeed>
+    <defaultSpeed>1800</defaultSpeed>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Higher Resolution">
@@ -365,7 +365,7 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
-    <defaultSpeed>3600</defaultSpeed>
+    <defaultSpeed>1800</defaultSpeed>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution">
