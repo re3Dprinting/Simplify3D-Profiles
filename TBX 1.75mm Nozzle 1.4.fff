@@ -10,7 +10,7 @@
     <autoWidth>1</autoWidth>
     <width>2.1</width>
     <extrusionMultiplier>1</extrusionMultiplier>
-    <useRetract>1</useRetract>
+    <useRetract>0</useRetract>
     <retractionDistance>0</retractionDistance>
     <extraRestartDistance>0.5</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
@@ -226,7 +226,7 @@
       <autoWidth>1</autoWidth>
       <width>2.1</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
+      <useRetract>0</useRetract>
       <retractionDistance>0</retractionDistance>
       <extraRestartDistance>0.5</extraRestartDistance>
       <retractionZLift>0</retractionZLift>
@@ -270,7 +270,7 @@
       <autoWidth>1</autoWidth>
       <width>2.1</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
+      <useRetract>0</useRetract>
       <retractionDistance>0</retractionDistance>
       <extraRestartDistance>0.5</extraRestartDistance>
       <retractionZLift>0</retractionZLift>
@@ -331,7 +331,7 @@
       <autoWidth>1</autoWidth>
       <width>2.1</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
+      <useRetract>0</useRetract>
       <retractionDistance>0</retractionDistance>
       <extraRestartDistance>0.5</extraRestartDistance>
       <retractionZLift>0</retractionZLift>
