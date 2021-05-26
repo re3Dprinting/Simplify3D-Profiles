@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="GBX 0.8mm Nozzle 1.4" version="2021-05-26 09:46:47" app="S3D-Software 4.1.2">
+<profile name="GBX 0.8mm Nozzle 1.4" version="2021-05-26 10:58:38" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
   <printMaterial>Ultrafuse - rPET</printMaterial>
   <printQuality>Standard Resolution</printQuality>
@@ -135,8 +135,8 @@
   <gcodeZoffset>0</gcodeZoffset>
   <overrideMachineDefinition>1</overrideMachineDefinition>
   <machineTypeOverride>0</machineTypeOverride>
-  <strokeXoverride>570</strokeXoverride>
-  <strokeYoverride>595</strokeYoverride>
+  <strokeXoverride>545</strokeXoverride>
+  <strokeYoverride>593</strokeYoverride>
   <strokeZoverride>470</strokeZoverride>
   <originOffsetXoverride>0</originOffsetXoverride>
   <originOffsetYoverride>0</originOffsetYoverride>
@@ -207,7 +207,7 @@
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureExtruders name="Pellet Extruders" allowedToolheads="3">
-    <strokeXoverride>570</strokeXoverride>
+    <strokeXoverride>545</strokeXoverride>
     <primaryExtruder>0</primaryExtruder>
     <raftExtruder>0</raftExtruder>
     <skirtExtruder>0</skirtExtruder>
