@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<profile name="GBX 0.8mm Nozzle 1.4" version="2021-05-05 17:30:56" app="S3D-Software 4.1.2">
+<profile name="GBX 0.8mm Nozzle 1.4" version="2021-05-26 09:43:10" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
-  <printMaterial>re:3D - PC</printMaterial>
+  <printMaterial>Ultrafuse - rPET</printMaterial>
   <printQuality>Standard Resolution</printQuality>
   <printExtruders>Pellet Extruders</printExtruders>
   <extruder name="Pellet Extruder">
@@ -90,25 +90,25 @@
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="230"/>
+    <setpoint layer="1" temperature="225"/>
   </temperatureController>
   <temperatureController name="Middle Heat Zone">
     <temperatureNumber>1</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="225"/>
+    <setpoint layer="1" temperature="220"/>
   </temperatureController>
   <temperatureController name="Top Heat Zone">
     <temperatureNumber>2</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="210"/>
+    <setpoint layer="1" temperature="175"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="115"/>
+    <setpoint layer="1" temperature="60"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
@@ -252,7 +252,7 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="160"/>
+      <setpoint layer="1" temperature="155"/>
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -345,13 +345,13 @@
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="220"/>
+      <setpoint layer="1" temperature="225"/>
     </temperatureController>
     <temperatureController name="Middle Heat Zone">
       <temperatureNumber>1</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="215"/>
+      <setpoint layer="1" temperature="220"/>
     </temperatureController>
     <temperatureController name="Top Heat Zone">
       <temperatureNumber>2</temperatureNumber>
@@ -366,7 +366,7 @@
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
     <defaultSpeed>3600</defaultSpeed>
-    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
+    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution">
     <layerHeight>0.6033</layerHeight>
