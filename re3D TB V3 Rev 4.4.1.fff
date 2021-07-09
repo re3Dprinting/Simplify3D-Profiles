@@ -179,7 +179,7 @@
   <startingGcode>M540 S1,M220 S100,M221 S100,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,,</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
-  <toolChangeGcode>{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0 ,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 X1.0 F7200,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 X945 F7200,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=0}M106 S[fan_speed_pwm]</toolChangeGcode>
+  <toolChangeGcode>{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0 ,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 X1.0 F7200,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 X945 F7200,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
   <endingGcode>T0,G1 E-3 F200,M104 S0,T1,G1 E-3 F200,M104 S0,M190 S0,G28 X0 Y0,M18,M107,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
