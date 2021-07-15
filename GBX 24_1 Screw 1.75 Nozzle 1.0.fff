@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="GBX 1.75mm Nozzle 1.3" version="2021-02-03 15:32:47" app="S3D-Software 4.1.2">
+<profile name="GBX 24.1 Screw 1.75 Nozzle 1.0" version="2021-07-15 15:27:17" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
   <printMaterial>Ultrafuse - rPET</printMaterial>
   <printQuality>Standard Resolution</printQuality>
@@ -10,19 +10,19 @@
     <autoWidth>1</autoWidth>
     <width>2.1</width>
     <extrusionMultiplier>1</extrusionMultiplier>
-    <useRetract>0</useRetract>
-    <retractionDistance>0.2</retractionDistance>
-    <extraRestartDistance>0.5</extraRestartDistance>
+    <useRetract>1</useRetract>
+    <retractionDistance>0</retractionDistance>
+    <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>702</retractionSpeed>
-    <useCoasting>0</useCoasting>
-    <coastingDistance>3</coastingDistance>
+    <retractionSpeed>1500</retractionSpeed>
+    <useCoasting>1</useCoasting>
+    <coastingDistance>1</coastingDistance>
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>1</layerHeight>
-  <topSolidLayers>5</topSolidLayers>
+  <layerHeight>0.603</layerHeight>
+  <topSolidLayers>0</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>2</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
@@ -33,7 +33,7 @@
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
-  <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
+  <firstLayerUnderspeed>0.75</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>0</raftExtruder>
   <raftTopLayers>1</raftTopLayers>
@@ -60,14 +60,14 @@
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
   <infillExtruder>0</infillExtruder>
-  <internalInfillPattern>Rectilinear</internalInfillPattern>
+  <internalInfillPattern>Full Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>15</infillPercentage>
+  <infillPercentage>20</infillPercentage>
   <outlineOverlapPercentage>25</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
-  <minInfillLength>5</minInfillLength>
+  <minInfillLength>10</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <internalInfillAngles>45,-45</internalInfillAngles>
+  <internalInfillAngles>0</internalInfillAngles>
   <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
@@ -102,7 +102,7 @@
     <temperatureNumber>2</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="180"/>
+    <setpoint layer="1" temperature="175"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
@@ -111,7 +111,9 @@
     <setpoint layer="1" temperature="60"/>
   </temperatureController>
   <fanSpeed>
-    <setpoint layer="1" speed="100"/>
+    <setpoint layer="1" speed="0"/>
+    <setpoint layer="5" speed="100"/>
+    <setpoint layer="7" speed="0"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -153,7 +155,7 @@
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M92 X106.67 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E30.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
+  <startingGcode>,M220 S100,M221 S100,M900 K0.0,M92 E44.00,M203 X150 Y150 Z5 E40,M201 X500 Y500 Z12 E200,M204 P500 R40 T800,M500,,T0,G28,M290 Z0.0,,G92 E0,G1 E400.0 F40,G92 E0,,G1 Z0.3 F200,,</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
@@ -162,12 +164,12 @@
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
   <postProcessing>{REPLACE &quot;; layer&quot; &quot;M117 Layer&quot;},{REPLACE &quot; Z = &quot; &quot; Z=&quot;},</postProcessing>
-  <defaultSpeed>1800</defaultSpeed>
+  <defaultSpeed>4500</defaultSpeed>
   <outlineUnderspeed>1</outlineUnderspeed>
-  <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
+  <solidInfillUnderspeed>1</solidInfillUnderspeed>
   <supportUnderspeed>0.9</supportUnderspeed>
-  <rapidXYspeed>6000</rapidXYspeed>
-  <rapidZspeed>276</rapidZspeed>
+  <rapidXYspeed>9000</rapidXYspeed>
+  <rapidZspeed>300</rapidZspeed>
   <minBridgingArea>25</minBridgingArea>
   <bridgingExtraInflation>1</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
@@ -176,12 +178,12 @@
   <fixedBridgingAngle>0</fixedBridgingAngle>
   <applyBridgingToPerimeters>0</applyBridgingToPerimeters>
   <filamentDiameters>2.87|2.87|2.87|2.87|2.87|2.87</filamentDiameters>
-  <filamentPricesPerKg>41.8|41.8|41.8|41.8|41.8|41.8</filamentPricesPerKg>
+  <filamentPricesPerKg>3|41.8|41.8|41.8|41.8|41.8</filamentPricesPerKg>
   <filamentDensities>1.38|1.04|1.04|1.04|1.04|1.04</filamentDensities>
-  <useMinPrintHeight>0</useMinPrintHeight>
-  <minPrintHeight>50</minPrintHeight>
-  <useMaxPrintHeight>0</useMaxPrintHeight>
-  <maxPrintHeight>70</maxPrintHeight>
+  <useMinPrintHeight>1</useMinPrintHeight>
+  <minPrintHeight>0</minPrintHeight>
+  <useMaxPrintHeight>1</useMaxPrintHeight>
+  <maxPrintHeight>15</maxPrintHeight>
   <useDiaphragm>0</useDiaphragm>
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
   <robustSlicing>1</robustSlicing>
@@ -216,7 +218,7 @@
     <useSkirt>1</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
-    <startingGcode>M92 X106.67 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E30.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
+    <startingGcode>,M220 S100,M221 S100,M900 K0.0,M92 E44.00,M203 X150 Y150 Z5 E40,M201 X500 Y500 Z12 E200,M204 P500 R40 T800,M500,,T0,G28,M290 Z0.0,,G92 E0,G1 E400.0 F40,G92 E0,,G1 Z0.3 F200,,</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureMaterial name="Ultrafuse - rPET">
     <extruder name="Pellet Extruder">
@@ -225,13 +227,13 @@
       <autoWidth>1</autoWidth>
       <width>2.1</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>0</useRetract>
-      <retractionDistance>0.2</retractionDistance>
-      <extraRestartDistance>0.5</extraRestartDistance>
+      <useRetract>1</useRetract>
+      <retractionDistance>0</retractionDistance>
+      <extraRestartDistance>0</extraRestartDistance>
       <retractionZLift>0</retractionZLift>
-      <retractionSpeed>702</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>3</coastingDistance>
+      <retractionSpeed>1500</retractionSpeed>
+      <useCoasting>1</useCoasting>
+      <coastingDistance>1</coastingDistance>
       <useWipe>0</useWipe>
       <wipeDistance>5</wipeDistance>
     </extruder>
@@ -251,7 +253,7 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="180"/>
+      <setpoint layer="1" temperature="175"/>
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -259,17 +261,17 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
-    <defaultSpeed>1800</defaultSpeed>
-    <startingGcode>M92 X106.67 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E30.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
+    <defaultSpeed>4500</defaultSpeed>
+    <startingGcode>,M220 S100,M221 S100,M900 K0.0,M92 E44.00,M203 X150 Y150 Z5 E40,M201 X500 Y500 Z12 E200,M204 P500 R40 T800,M500,,T0,G28,M290 Z0.0,,G92 E0,G1 E400.0 F40,G92 E0,,G1 Z0.3 F200,,</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution">
-    <layerHeight>1</layerHeight>
-    <topSolidLayers>5</topSolidLayers>
+    <layerHeight>0.603</layerHeight>
+    <topSolidLayers>0</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
-    <infillPercentage>15</infillPercentage>
+    <infillPercentage>20</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
-    <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
+    <firstLayerUnderspeed>0.75</firstLayerUnderspeed>
     <infillLayerInterval>1</infillLayerInterval>
     <useRaft>0</useRaft>
     <useSkirt>1</useSkirt>
