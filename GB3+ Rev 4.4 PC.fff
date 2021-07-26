@@ -453,7 +453,7 @@
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder" status="on" stabilize="on"/>
-    <startingGcode>M540 S1,M92 X118.52 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E947 ; calibrate E,M220 S100,M221 S100,M204 S2000,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,</startingGcode>
+    <startingGcode>M540 S1,M92 X118.52 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E947 ; calibrate E,M220 S100,M221 S100,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,</startingGcode>
     <toolChangeGcode/>
     <temperatureController name="Left Extruder">
       <temperatureNumber>0</temperatureNumber>
@@ -501,7 +501,7 @@
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder" status="on" stabilize="on"/>
-    <startingGcode>M540 S1,M92 X118.52 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E947 ; calibrate E,M220 S100,M221 S100,M204 S2000,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,T1,G92 E0,G1 Z0.3 F200,</startingGcode>
+    <startingGcode>M540 S1,M92 X118.52 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E947 ; calibrate E,M220 S100,M221 S100,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,T1,G92 E0,G1 Z0.3 F200,</startingGcode>
     <toolChangeGcode>{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0 ,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 X1.0 F7200,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S255,{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 X645 F7200,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S255</toolChangeGcode>
     <temperatureController name="Left Extruder">
       <temperatureNumber>0</temperatureNumber>
