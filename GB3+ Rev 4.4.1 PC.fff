@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="re3D GB3+ Rev 4.4 PC" version="2019-07-22 17:09:34" app="S3D-Software 4.1.2">
+<profile name="re3D GB3+ Rev 4.4.1 PC" version="2021-07-26 17:09:34" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
   <printMaterial>PC</printMaterial>
   <printQuality>Standard Resolution - Raft</printQuality>
