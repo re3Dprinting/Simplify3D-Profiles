@@ -1285,8 +1285,8 @@
     <primePillarSpeedMultiplier>0.95</primePillarSpeedMultiplier>
     <useOozeShield>0</useOozeShield>
     <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
-    <supportUpperSeparationLayers>0</supportUpperSeparationLayers>
-    <supportLowerSeparationLayers>0</supportLowerSeparationLayers>
+    <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
+    <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder" status="on" stabilize="on"/>
     <startingGcode>M540 S1,M220 S100,M221 S100,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,</startingGcode>
