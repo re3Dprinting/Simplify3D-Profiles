@@ -180,7 +180,7 @@
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode>{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0 ,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 X1.0 F7200,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 X945 F7200,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
-  <endingGcode>T0,G92 E0,G1 E-3 F200,M104 S0,T1,G92 E0,G1 E-3 F200,M104 S0,M190 S0,G28 X Y,M18,M107,</endingGcode>
+  <endingGcode>T0,G92 E0,G1 E-3 F200,M104 S0,T1,G92 E0,G1 E-3 F200,M104 S0,M190 S0,G28 XY,M18,M107,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
@@ -1084,7 +1084,7 @@
     <primePillarLocation>7</primePillarLocation>
     <primePillarSpeedMultiplier>0.95</primePillarSpeedMultiplier>
     <useOozeShield>0</useOozeShield>
-    <supportHorizontalPartOffset>0.5</supportHorizontalPartOffset>
+    <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
     <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="off" stabilize="off"/>
@@ -1120,7 +1120,7 @@
     <primePillarLocation>7</primePillarLocation>
     <primePillarSpeedMultiplier>0.95</primePillarSpeedMultiplier>
     <useOozeShield>0</useOozeShield>
-    <supportHorizontalPartOffset>0.5</supportHorizontalPartOffset>
+    <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
     <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="on"/>
@@ -1192,7 +1192,7 @@
     <primePillarLocation>7</primePillarLocation>
     <primePillarSpeedMultiplier>0.95</primePillarSpeedMultiplier>
     <useOozeShield>0</useOozeShield>
-    <supportHorizontalPartOffset>0.5</supportHorizontalPartOffset>
+    <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
     <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="on"/>
