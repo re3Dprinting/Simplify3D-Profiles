@@ -339,7 +339,7 @@
       <relayBetweenLayers>0</relayBetweenLayers>
       <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="235"/>
+      <setpoint layer="1" temperature="245"/>
     </temperatureController>
     <temperatureController name="Left Extruder">
       <temperatureNumber>0</temperatureNumber>
@@ -347,7 +347,7 @@
       <relayBetweenLayers>0</relayBetweenLayers>
       <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="235"/>
+      <setpoint layer="1" temperature="245"/>
     </temperatureController>
     <temperatureController name="Left Cool">
       <temperatureNumber>2</temperatureNumber>
@@ -1162,13 +1162,13 @@
     <infillPercentage>15</infillPercentage>
     <firstLayerHeightPercentage>200</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
-    <firstLayerUnderspeed>1.2</firstLayerUnderspeed>
+    <firstLayerUnderspeed>1</firstLayerUnderspeed>
     <infillLayerInterval>1</infillLayerInterval>
     <useRaft>1</useRaft>
     <useSkirt>0</useSkirt>
     <supportLayerInterval>1</supportLayerInterval>
     <denseSupportLayers>3</denseSupportLayers>
-	<gcodeZoffset>-0.25</gcodeZoffset>
+	<gcodeZoffset>-0.5</gcodeZoffset>
   </autoConfigureQuality>
   <autoConfigureQuality name="Higher Resolution - Raft">
     <layerHeight>0.2223</layerHeight>
@@ -1177,13 +1177,13 @@
     <infillPercentage>15</infillPercentage>
     <firstLayerHeightPercentage>200</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
-    <firstLayerUnderspeed>1.2</firstLayerUnderspeed>
+    <firstLayerUnderspeed>1</firstLayerUnderspeed>
     <infillLayerInterval>1</infillLayerInterval>
     <useRaft>1</useRaft>
     <useSkirt>0</useSkirt>
     <supportLayerInterval>1</supportLayerInterval>
     <denseSupportLayers>3</denseSupportLayers>
-	<gcodeZoffset>-0.25</gcodeZoffset>
+	<gcodeZoffset>-0.5</gcodeZoffset>
   </autoConfigureQuality>
   <autoConfigureQuality name="Highest Resolution - Raft">
     <layerHeight>0.1508</layerHeight>
@@ -1192,13 +1192,13 @@
     <infillPercentage>15</infillPercentage>
     <firstLayerHeightPercentage>200</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
-    <firstLayerUnderspeed>1.2</firstLayerUnderspeed>
+    <firstLayerUnderspeed>1</firstLayerUnderspeed>
     <infillLayerInterval>2</infillLayerInterval>
     <useRaft>1</useRaft>
     <useSkirt>0</useSkirt>
     <supportLayerInterval>2</supportLayerInterval>
     <denseSupportLayers>6</denseSupportLayers>
-	  <gcodeZoffset>-0.25</gcodeZoffset>
+	  <gcodeZoffset>-0.5</gcodeZoffset>
   </autoConfigureQuality>
   <autoConfigureExtruders name="Left Extruder" allowedToolheads="2">
     <originOffsetXoverride>0</originOffsetXoverride>
