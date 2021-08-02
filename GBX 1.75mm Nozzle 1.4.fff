@@ -111,7 +111,8 @@
     <setpoint layer="1" temperature="60"/>
   </temperatureController>
   <fanSpeed>
-    <setpoint layer="1" speed="100"/>
+    <setpoint layer="1" speed="0"/>
+	<setpoint layer="2" speed="100"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
