@@ -135,10 +135,10 @@
   <gcodeZoffset>0</gcodeZoffset>
   <overrideMachineDefinition>1</overrideMachineDefinition>
   <machineTypeOverride>0</machineTypeOverride>
-  <strokeXoverride>545</strokeXoverride>
+  <strokeXoverride>572</strokeXoverride>
   <strokeYoverride>593</strokeYoverride>
   <strokeZoverride>470</strokeZoverride>
-  <originOffsetXoverride>0</originOffsetXoverride>
+  <originOffsetXoverride>-33</originOffsetXoverride>
   <originOffsetYoverride>0</originOffsetYoverride>
   <originOffsetZoverride>0</originOffsetZoverride>
   <homeXdirOverride>-1</homeXdirOverride>
@@ -207,7 +207,7 @@
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureExtruders name="Pellet Extruders" allowedToolheads="3">
-    <strokeXoverride>545</strokeXoverride>
+    <strokeXoverride>572</strokeXoverride>
     <primaryExtruder>0</primaryExtruder>
     <raftExtruder>0</raftExtruder>
     <skirtExtruder>0</skirtExtruder>
