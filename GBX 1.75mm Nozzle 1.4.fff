@@ -154,7 +154,7 @@
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M92 X106.67 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E30.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
+  <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
@@ -217,7 +217,7 @@
     <useSkirt>1</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
-    <startingGcode>M92 X106.67 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E30.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
+    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureMaterial name="Ultrafuse - rPET">
     <extruder name="Pellet Extruder">
@@ -261,7 +261,7 @@
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
     <defaultSpeed>1800</defaultSpeed>
-    <startingGcode>M92 X106.67 ; calibrate X,M92 Y118.52 ; calibrate Y,M92 Z4031.5 ; calibrate Z,M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E30.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
+    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200,</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution">
     <layerHeight>1</layerHeight>
