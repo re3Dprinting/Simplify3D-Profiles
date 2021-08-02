@@ -205,7 +205,7 @@
   <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
   <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
-  <horizontalSizeCompensation>0.5</horizontalSizeCompensation>
+  <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureExtruders name="Pellet Extruders" allowedToolheads="3">
     <strokeXoverride>572</strokeXoverride>
     <primaryExtruder>0</primaryExtruder>
