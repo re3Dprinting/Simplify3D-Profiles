@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="GBX 0.4mm Nozzle 1.4" version="2021-08-11 13:46:11" app="S3D-Software 4.1.2">
+<profile name="GBX 0.4mm Nozzle 1.4" version="2021-08-11 13:49:39" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
   <printMaterial>Ultrafuse - rPET</printMaterial>
   <printQuality>Standard Resolution</printQuality>
@@ -22,9 +22,9 @@
   </extruder>
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.3175</layerHeight>
-  <topSolidLayers>4</topSolidLayers>
+  <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>2</bottomSolidLayers>
-  <perimeterOutlines>1</perimeterOutlines>
+  <perimeterOutlines>2</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
   <startPointOriginX>0</startPointOriginX>
@@ -221,7 +221,7 @@
   </autoConfigureExtruders>
   <autoConfigureQuality name="Higher Resolution">
     <layerHeight>0.2223</layerHeight>
-    <topSolidLayers>4</topSolidLayers>
+    <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <infillPercentage>10</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
@@ -282,7 +282,7 @@
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution">
     <layerHeight>0.3175</layerHeight>
-    <topSolidLayers>4</topSolidLayers>
+    <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>2</bottomSolidLayers>
     <infillPercentage>10</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
