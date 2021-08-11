@@ -22,9 +22,9 @@
   </extruder>
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>1.5</layerHeight>
-  <topSolidLayers>5</topSolidLayers>
-  <bottomSolidLayers>3</bottomSolidLayers>
-  <perimeterOutlines>2</perimeterOutlines>
+  <topSolidLayers>4</topSolidLayers>
+  <bottomSolidLayers>2</bottomSolidLayers>
+  <perimeterOutlines>1</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
   <startPointOriginX>0</startPointOriginX>
@@ -265,8 +265,8 @@
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution">
     <layerHeight>1.5</layerHeight>
-    <topSolidLayers>5</topSolidLayers>
-    <bottomSolidLayers>3</bottomSolidLayers>
+    <topSolidLayers>4</topSolidLayers>
+    <bottomSolidLayers>2</bottomSolidLayers>
     <infillPercentage>15</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
