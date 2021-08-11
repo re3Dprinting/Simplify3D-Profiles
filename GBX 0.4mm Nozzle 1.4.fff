@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<profile name="GBX 0.4mm Nozzle 1.4" version="2021-08-11 13:44:29" app="S3D-Software 4.1.2">
+<profile name="GBX 0.4mm Nozzle 1.4" version="2021-08-11 13:46:11" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
   <printMaterial>Ultrafuse - rPET</printMaterial>
   <printQuality>Standard Resolution</printQuality>
   <printExtruders>Pellet Extruders</printExtruders>
   <extruder name="Pellet Extruder">
     <toolheadNumber>0</toolheadNumber>
-    <diameter>0.8</diameter>
+    <diameter>0.4</diameter>
     <autoWidth>1</autoWidth>
-    <width>0.96</width>
+    <width>0.48</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>0</retractionDistance>
@@ -21,7 +21,7 @@
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.6033</layerHeight>
+  <layerHeight>0.3175</layerHeight>
   <topSolidLayers>4</topSolidLayers>
   <bottomSolidLayers>2</bottomSolidLayers>
   <perimeterOutlines>1</perimeterOutlines>
@@ -220,7 +220,7 @@
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureQuality name="Higher Resolution">
-    <layerHeight>0.3175</layerHeight>
+    <layerHeight>0.2223</layerHeight>
     <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <infillPercentage>10</infillPercentage>
@@ -239,9 +239,9 @@
   <autoConfigureMaterial name="Ultrafuse - rPET">
     <extruder name="Pellet Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.8</diameter>
+      <diameter>0.4</diameter>
       <autoWidth>1</autoWidth>
-      <width>0.96</width>
+      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
       <useRetract>1</useRetract>
       <retractionDistance>0</retractionDistance>
@@ -281,7 +281,7 @@
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution">
-    <layerHeight>0.6033</layerHeight>
+    <layerHeight>0.3175</layerHeight>
     <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>2</bottomSolidLayers>
     <infillPercentage>10</infillPercentage>
