@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="re3D TB V3 Rev 4.4.2" version="2021-07-9 03:23:36" app="S3D-Software 4.1.2">
+<profile name="re3D TB V3 Rev 4.4.1b" version="2021-07-9 03:23:36" app="S3D-Software 4.1.2">
   <baseProfile>re3D TB V3</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Standard Resolution - No Raft</printQuality>
