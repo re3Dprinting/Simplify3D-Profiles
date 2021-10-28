@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="re3D GB3+ XLT Rev 4.4.2" version="2021-07-27 12:02:34" app="S3D-Software 4.1.2">
+<profile name="re3D GB3+ XLT Rev 4.4.2" version="2021-10-18 12:02:34" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+ XLT</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Standard Resolution - No Raft</printQuality>
@@ -217,7 +217,7 @@
   <onlyWipeOutlines>1</onlyWipeOutlines>
   <avoidCrossingOutline>1</avoidCrossingOutline>
   <maxMovementDetourFactor>4</maxMovementDetourFactor>
-  <toolChangeRetractionDistance>2</toolChangeRetractionDistance>
+  <toolChangeRetractionDistance>12</toolChangeRetractionDistance>
   <toolChangeExtraRestartDistance>0.01</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>1000</toolChangeRetractionSpeed>
   <externalThinWallType>0</externalThinWallType>
@@ -353,13 +353,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="170"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="170"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -433,13 +433,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="200"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="200"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -514,13 +514,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="180"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="180"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -594,13 +594,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="190"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="190"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -674,13 +674,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="200"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="200"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -754,13 +754,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="200"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="200"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -834,13 +834,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="175"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="175"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -914,13 +914,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="175"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="175"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -994,13 +994,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="190"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="190"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
@@ -1074,13 +1074,13 @@
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="180"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>
     <temperatureController name="Right Cool">
       <temperatureNumber>3</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="180"/>	  
+      <setpoint layer="1" temperature="165"/>	  
     </temperatureController>	
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
