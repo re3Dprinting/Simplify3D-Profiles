@@ -1,30 +1,29 @@
 <?xml version="1.0"?>
-<profile name="GBX 1.5" version="2021-05-26 10:58:38" app="S3D-Software 4.1.2">
+<profile name="GBX 1.5" version="2021-11-03 14:37:42" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
   <printMaterial>Ultrafuse - rPET</printMaterial>
-  <printQuality>Standard Resolution</printQuality>
+  <printQuality>2.85mm Nozzle</printQuality>
   <printExtruders>Pellet Extruders</printExtruders>
   <extruder name="Pellet Extruder">
     <toolheadNumber>0</toolheadNumber>
-    <diameter>0.8</diameter>
-    <autoWidth>1</autoWidth>
-    <width>0.96</width>
+	<diameter>0.8</diameter>
     <extrusionMultiplier>1</extrusionMultiplier>
-    <useRetract>1</useRetract>
-    <retractionDistance>0</retractionDistance>
-    <extraRestartDistance>0.5</extraRestartDistance>
-    <retractionZLift>0</retractionZLift>
-    <retractionSpeed>600</retractionSpeed>
-    <useCoasting>0</useCoasting>
-    <coastingDistance>1</coastingDistance>
+	<autoWidth>1</autoWidth>
+	<width>0.96</width>
+	<retractionZLift>0</retractionZLift>
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
+  <useRetract>1</useRetract>
+  <retractionDistance>0</retractionDistance>
+  <extraRestartDistance>1</extraRestartDistance>
+  <retractionSpeed>600</retractionSpeed>
+  <useCoasting>1</useCoasting>
+  <coastingDistance>0.5</coastingDistance>
   <layerHeight>0.6033</layerHeight>
   <topSolidLayers>4</topSolidLayers>
   <bottomSolidLayers>2</bottomSolidLayers>
-  <perimeterOutlines>1</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
   <startPointOriginX>0</startPointOriginX>
@@ -70,7 +69,6 @@
   <internalInfillAngles>45,-45</internalInfillAngles>
   <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
-  <generateSupport>1</generateSupport>
   <supportExtruder>0</supportExtruder>
   <supportInfillPercentage>15</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
@@ -163,7 +161,6 @@
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
   <postProcessing>{REPLACE &quot;; layer&quot; &quot;M117 Layer&quot;},{REPLACE &quot; Z = &quot; &quot; Z=&quot;},</postProcessing>
-  <defaultSpeed>3600</defaultSpeed>
   <outlineUnderspeed>1</outlineUnderspeed>
   <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
   <supportUnderspeed>0.9</supportUnderspeed>
@@ -222,17 +219,8 @@
   <autoConfigureMaterial name="re:3D - PLA">
     <extruder name="Pellet Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.8</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.96</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0</retractionDistance>
-      <extraRestartDistance>0.5</extraRestartDistance>
       <retractionZLift>0</retractionZLift>
-      <retractionSpeed>600</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>1</coastingDistance>
       <useWipe>0</useWipe>
       <wipeDistance>5</wipeDistance>
     </extruder>
@@ -260,84 +248,13 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
-    <defaultSpeed>3600</defaultSpeed>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureMaterial>
-  <autoConfigureMaterial name="re:3D - PC">
-    <extruder name="Pellet Extruder">
-      <toolheadNumber>0</toolheadNumber>
-      <diameter>0.8</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.96</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0</retractionDistance>
-      <extraRestartDistance>0.5</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>600</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>1</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
-    <temperatureController name="Bottom Heat Zone">
-      <temperatureNumber>0</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="230"/>
-    </temperatureController>
-    <temperatureController name="Middle Heat Zone">
-      <temperatureNumber>1</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="225"/>
-    </temperatureController>
-    <temperatureController name="Top Heat Zone">
-      <temperatureNumber>2</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="210"/>
-    </temperatureController>
-    <temperatureController name="Heated Bed">
-      <temperatureNumber>0</temperatureNumber>
-      <isHeatedBed>1</isHeatedBed>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="115"/>
-    </temperatureController>
-    <defaultSpeed>3600</defaultSpeed>
-    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
-  </autoConfigureMaterial>
-  <autoConfigureQuality name="Higher Resolution">
-    <layerHeight>0.3175</layerHeight>
-    <topSolidLayers>4</topSolidLayers>
-    <bottomSolidLayers>3</bottomSolidLayers>
-    <infillPercentage>10</infillPercentage>
-    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
-    <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
-    <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
-    <infillLayerInterval>1</infillLayerInterval>
-    <useRaft>0</useRaft>
-    <useSkirt>1</useSkirt>
-    <skirtLayers>1</skirtLayers>
-    <skirtOutlines>3</skirtOutlines>
-    <skirtOffset>15</skirtOffset>
-    <supportLayerInterval>1</supportLayerInterval>
-    <denseSupportLayers>2</denseSupportLayers>
-  </autoConfigureQuality>
   <autoConfigureMaterial name="Ultrafuse - rPET">
     <extruder name="Pellet Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.8</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.96</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0</retractionDistance>
-      <extraRestartDistance>0.5</extraRestartDistance>
       <retractionZLift>0</retractionZLift>
-      <retractionSpeed>600</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>1</coastingDistance>
       <useWipe>0</useWipe>
       <wipeDistance>5</wipeDistance>
     </extruder>
@@ -365,14 +282,59 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
-    <defaultSpeed>3600</defaultSpeed>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureMaterial>
-  <autoConfigureQuality name="Standard Resolution">
-    <layerHeight>0.6033</layerHeight>
+  <autoConfigureMaterial name="re:3D - PC">
+    <extruder name="Pellet Extruder">
+      <toolheadNumber>0</toolheadNumber>
+      <extrusionMultiplier>1</extrusionMultiplier>
+      <retractionZLift>0</retractionZLift>
+      <useWipe>0</useWipe>
+      <wipeDistance>5</wipeDistance>
+    </extruder>
+    <temperatureController name="Bottom Heat Zone">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="230"/>
+    </temperatureController>
+    <temperatureController name="Middle Heat Zone">
+      <temperatureNumber>1</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="225"/>
+    </temperatureController>
+    <temperatureController name="Top Heat Zone">
+      <temperatureNumber>2</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="210"/>
+    </temperatureController>
+    <temperatureController name="Heated Bed">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>1</isHeatedBed>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="115"/>
+    </temperatureController>
+    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+  </autoConfigureMaterial>
+  <autoConfigureQuality name="0.4mm Nozzle">
+	<extruder name="Pellet Extruder">
+		<diameter>0.4</diameter>
+		<autoWidth>1</autoWidth>
+		<width>0.48</width>
+		<useRetract>1</useRetract>
+		<retractionDistance>1</retractionDistance>
+		<extraRestartDistance>0</extraRestartDistance>
+		<retractionSpeed>600</retractionSpeed>
+		<useCoasting>0</useCoasting>
+		<coastingDistance>0</coastingDistance>
+	</extruder>
+    <layerHeight>0.3175</layerHeight>
     <topSolidLayers>4</topSolidLayers>
-    <bottomSolidLayers>2</bottomSolidLayers>
-    <infillPercentage>10</infillPercentage>
+    <bottomSolidLayers>3</bottomSolidLayers>
+	<perimeterOutlines>2</perimeterOutlines>
+    <infillPercentage>15</infillPercentage>
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
     <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
@@ -382,7 +344,102 @@
     <skirtLayers>1</skirtLayers>
     <skirtOutlines>3</skirtOutlines>
     <skirtOffset>5</skirtOffset>
+	<generateSupport>1</generateSupport>
     <supportLayerInterval>1</supportLayerInterval>
     <denseSupportLayers>2</denseSupportLayers>
+	<defaultSpeed>3600</defaultSpeed>
+  </autoConfigureQuality>
+  <autoConfigureQuality name="0.8mm Nozzle">
+	<extruder name="Pellet Extruder">
+		<diameter>0.8</diameter>
+		<autoWidth>1</autoWidth>
+		<width>0.96</width>
+		<useRetract>1</useRetract>
+		<retractionDistance>0</retractionDistance>
+		<extraRestartDistance>1</extraRestartDistance>
+		<retractionSpeed>600</retractionSpeed>
+		<useCoasting>1</useCoasting>
+		<coastingDistance>0.5</coastingDistance>
+	</extruder>
+	<layerHeight>0.6033</layerHeight>
+    <topSolidLayers>4</topSolidLayers>
+    <bottomSolidLayers>3</bottomSolidLayers>
+	<perimeterOutlines>2</perimeterOutlines>
+    <infillPercentage>15</infillPercentage>
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
+    <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
+    <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
+    <infillLayerInterval>1</infillLayerInterval>
+    <useRaft>0</useRaft>
+    <useSkirt>1</useSkirt>
+    <skirtLayers>1</skirtLayers>
+    <skirtOutlines>3</skirtOutlines>
+    <skirtOffset>5</skirtOffset>
+	<generateSupport>1</generateSupport>
+    <supportLayerInterval>1</supportLayerInterval>
+    <denseSupportLayers>2</denseSupportLayers>
+	<defaultSpeed>3600</defaultSpeed>
+  </autoConfigureQuality>
+  <autoConfigureQuality name="1.75mm Nozzle">
+    <extruder name="Pellet Extruder">
+		<diameter>1.75</diameter>
+		<autoWidth>1</autoWidth>
+		<width>2.1</width>
+		<useRetract>0</useRetract>
+		<retractionDistance>0</retractionDistance>
+		<extraRestartDistance>0</extraRestartDistance>
+		<retractionSpeed>600</retractionSpeed>
+		<useCoasting>0</useCoasting>
+		<coastingDistance>0</coastingDistance>
+	</extruder>
+	<layerHeight>1</layerHeight>
+    <topSolidLayers>4</topSolidLayers>
+    <bottomSolidLayers>2</bottomSolidLayers>
+	<perimeterOutlines>2</perimeterOutlines>
+    <infillPercentage>20</infillPercentage>
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
+    <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
+    <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
+    <infillLayerInterval>1</infillLayerInterval>
+    <useRaft>0</useRaft>
+    <useSkirt>1</useSkirt>
+    <skirtLayers>1</skirtLayers>
+    <skirtOutlines>3</skirtOutlines>
+    <skirtOffset>5</skirtOffset>
+	<generateSupport>0</generateSupport>
+    <supportLayerInterval>1</supportLayerInterval>
+    <denseSupportLayers>2</denseSupportLayers>
+	<defaultSpeed>1800</defaultSpeed>
+  </autoConfigureQuality>
+  <autoConfigureQuality name="2.85mm Nozzle">
+	<extruder name="Pellet Extruder">
+		<diameter>2.85</diameter>
+		<autoWidth>1</autoWidth>
+		<width>3.42</width>
+		<useRetract>0</useRetract>
+		<retractionDistance>0</retractionDistance>
+		<extraRestartDistance>0</extraRestartDistance>
+		<retractionSpeed>600</retractionSpeed>
+		<useCoasting>0</useCoasting>
+		<coastingDistance>0</coastingDistance>
+	</extruder>
+	<layerHeight>1.5</layerHeight>
+    <topSolidLayers>4</topSolidLayers>
+    <bottomSolidLayers>2</bottomSolidLayers>
+	<perimeterOutlines>1</perimeterOutlines>
+    <infillPercentage>20</infillPercentage>
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
+    <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
+    <firstLayerUnderspeed>0.6</firstLayerUnderspeed>
+    <infillLayerInterval>1</infillLayerInterval>
+    <useRaft>0</useRaft>
+    <useSkirt>1</useSkirt>
+    <skirtLayers>1</skirtLayers>
+    <skirtOutlines>3</skirtOutlines>
+    <skirtOffset>5</skirtOffset>
+	<generateSupport>0</generateSupport>
+    <supportLayerInterval>1</supportLayerInterval>
+    <denseSupportLayers>2</denseSupportLayers>
+	<defaultSpeed>900</defaultSpeed>
   </autoConfigureQuality>
 </profile>
