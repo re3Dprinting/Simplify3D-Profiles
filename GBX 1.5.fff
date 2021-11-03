@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="GBX 0.8mm Nozzle 1.4" version="2021-05-26 10:58:38" app="S3D-Software 4.1.2">
+<profile name="GBX 1.5" version="2021-05-26 10:58:38" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+</baseProfile>
   <printMaterial>Ultrafuse - rPET</printMaterial>
   <printQuality>Standard Resolution</printQuality>
