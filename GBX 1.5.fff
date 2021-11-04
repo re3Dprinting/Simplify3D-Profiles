@@ -249,6 +249,8 @@
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+	<filamentPricesPerKg>0|0|0|0|0|0</filamentPricesPerKg>
+	<filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="Ultrafuse - rPET">
     <extruder name="Pellet Extruder">
@@ -283,6 +285,8 @@
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+	<filamentPricesPerKg>3.11|3.11|3.11|3.11|3.11|3.11</filamentPricesPerKg>
+	<filamentDensities>1.38|1.38|1.38|1.38|1.38|1.38</filamentDensities>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="re:3D - rPC">
     <extruder name="Pellet Extruder">
@@ -317,6 +321,8 @@
       <setpoint layer="1" temperature="115"/>
     </temperatureController>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+	<filamentPricesPerKg>0|0|0|0|0|0</filamentPricesPerKg>
+	<filamentDensities>1.20|1.20|1.20|1.20|1.20|1.20</filamentDensities>
   </autoConfigureMaterial>
   <autoConfigureQuality name="0.4mm Nozzle">
 	<extruder name="Pellet Extruder">
