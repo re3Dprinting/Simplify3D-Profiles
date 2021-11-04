@@ -216,7 +216,7 @@
     <useOozeShield>0</useOozeShield>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureExtruders>
-  <autoConfigureMaterial name="re:3D - PLA">
+  <autoConfigureMaterial name="re:3D - rPLA">
     <extruder name="Pellet Extruder">
       <toolheadNumber>0</toolheadNumber>
       <extrusionMultiplier>1</extrusionMultiplier>
@@ -284,7 +284,7 @@
     </temperatureController>
     <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureMaterial>
-  <autoConfigureMaterial name="re:3D - PC">
+  <autoConfigureMaterial name="re:3D - rPC">
     <extruder name="Pellet Extruder">
       <toolheadNumber>0</toolheadNumber>
       <extrusionMultiplier>1</extrusionMultiplier>
