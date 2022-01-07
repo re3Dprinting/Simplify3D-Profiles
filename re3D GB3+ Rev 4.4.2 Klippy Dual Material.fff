@@ -47,7 +47,7 @@
   <startPointOriginY>600</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>200</firstLayerHeightPercentage>
+  <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>1</firstLayerUnderspeed>
   <useRaft>1</useRaft>
@@ -521,7 +521,7 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>2</bottomSolidLayers>
     <infillPercentage>15</infillPercentage>
-    <firstLayerHeightPercentage>200</firstLayerHeightPercentage>
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
     <firstLayerUnderspeed>1</firstLayerUnderspeed>
     <infillLayerInterval>1</infillLayerInterval>
@@ -536,7 +536,7 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <infillPercentage>15</infillPercentage>
-    <firstLayerHeightPercentage>200</firstLayerHeightPercentage>
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
     <firstLayerUnderspeed>1</firstLayerUnderspeed>
     <infillLayerInterval>1</infillLayerInterval>
