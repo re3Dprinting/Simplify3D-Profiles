@@ -89,7 +89,7 @@
   <generateSupport>1</generateSupport>
   <supportExtruder>1</supportExtruder>
   <supportInfillPercentage>15</supportInfillPercentage>
-  <supportExtraInflation>0.3</supportExtraInflation>
+  <supportExtraInflation>1.5</supportExtraInflation>
   <supportBaseLayers>1</supportBaseLayers>
   <denseSupportExtruder>1</denseSupportExtruder>
   <denseSupportLayers>3</denseSupportLayers>
@@ -185,11 +185,11 @@
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
   <postProcessing>{REPLACE &quot;; layer&quot; &quot;M117 Layer&quot;},{REPLACE &quot; Z = &quot; &quot; Z=&quot;},{REPLACE &quot;; prime pillar&quot; &quot;M221 S90 ; prime pillar&quot;},{REPLACE &quot;; inner perimeter&quot; &quot;M221 S100 ; inner perimeter&quot;},{REPLACE &quot;; support&quot; &quot;M221 S100 ; support&quot;},{REPLACE &quot;G90&quot; &quot;G4 P5000\nG90&quot;}</postProcessing>
-  <defaultSpeed>3600</defaultSpeed>
+  <defaultSpeed>4800</defaultSpeed>
   <outlineUnderspeed>0.9</outlineUnderspeed>
   <solidInfillUnderspeed>0.9</solidInfillUnderspeed>
   <supportUnderspeed>0.9</supportUnderspeed>
-  <rapidXYspeed>6000</rapidXYspeed>
+  <rapidXYspeed>18000</rapidXYspeed>
   <rapidZspeed>276</rapidZspeed>
   <minBridgingArea>25</minBridgingArea>
   <bridgingExtraInflation>1</bridgingExtraInflation>
@@ -295,7 +295,7 @@
       <setpoint layer="1" speed="0"/>
       <setpoint layer="7" speed="100"/>
     </fanSpeed>
-    <defaultSpeed>3600</defaultSpeed>
+    <defaultSpeed>4800</defaultSpeed>
     <outlineOverlapPercentage>22</outlineOverlapPercentage>
     <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
     <raftSeparationDistance>0</raftSeparationDistance>
@@ -367,7 +367,7 @@
       <setpoint layer="1" speed="0"/>
       <setpoint layer="7" speed="100"/>
     </fanSpeed>
-    <defaultSpeed>3600</defaultSpeed>
+    <defaultSpeed>4800</defaultSpeed>
     <outlineOverlapPercentage>22</outlineOverlapPercentage>
     <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
     <raftSeparationDistance>0</raftSeparationDistance>
@@ -439,7 +439,7 @@
       <setpoint layer="1" speed="0"/>
       <setpoint layer="7" speed="100"/>
     </fanSpeed>
-    <defaultSpeed>3600</defaultSpeed>
+    <defaultSpeed>4800</defaultSpeed>
     <outlineOverlapPercentage>22</outlineOverlapPercentage>
     <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
     <raftSeparationDistance>0</raftSeparationDistance>
@@ -511,7 +511,7 @@
       <setpoint layer="1" speed="0"/>
       <setpoint layer="7" speed="100"/>
     </fanSpeed>
-    <defaultSpeed>3600</defaultSpeed>
+    <defaultSpeed>4800</defaultSpeed>
     <outlineOverlapPercentage>22</outlineOverlapPercentage>
     <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
     <raftSeparationDistance>0</raftSeparationDistance>
