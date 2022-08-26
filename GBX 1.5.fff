@@ -136,7 +136,7 @@
   <strokeXoverride>572</strokeXoverride>
   <strokeYoverride>593</strokeYoverride>
   <strokeZoverride>470</strokeZoverride>
-  <originOffsetXoverride>-33</originOffsetXoverride>
+  <originOffsetXoverride>33</originOffsetXoverride>
   <originOffsetYoverride>0</originOffsetYoverride>
   <originOffsetZoverride>0</originOffsetZoverride>
   <homeXdirOverride>-1</homeXdirOverride>
@@ -152,11 +152,11 @@
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+  <startingGcode>M92 E55 ; Marlin calibrate E,SET_EXTRUDER_ROTATION_DISTANCE EXTRUDER=extruder [DISTANCE=3.846];Klipper calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
-  <endingGcode>T0,M104 S0 T0,M104 S0 T1,M104 S0 T2,M190 S0,G28 X0 Y0,M18,M107,</endingGcode>
+  <endingGcode>T0,M104 S0 T0,M104 S0 T1,M104 S0 T2,M190 S0,G28 X0 Y0,M18,M107,SET_GCODE_OFFSET Z=0,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
@@ -214,7 +214,7 @@
     <useSkirt>1</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
-    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+    <startingGcode>M92 E55 ; Marlin calibrate E,SET_EXTRUDER_ROTATION_DISTANCE EXTRUDER=extruder [DISTANCE=3.846]; Klipper calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureMaterial name="re:3D - rPC">
     <extruder name="Pellet Extruder">
@@ -248,7 +248,7 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="115"/>
     </temperatureController>
-    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+    <startingGcode>M92 E55 ; Marlin calibrate E,SET_EXTRUDER_ROTATION_DISTANCE EXTRUDER=extruder [DISTANCE=3.846]; Klipper calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
 	<filamentPricesPerKg>0|0|0|0|0|0</filamentPricesPerKg>
 	<filamentDensities>1.20|1.20|1.20|1.20|1.20|1.20</filamentDensities>
   </autoConfigureMaterial>
@@ -284,7 +284,7 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
-    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+    <startingGcode>M92 E55 ; Marlin calibrate E,SET_EXTRUDER_ROTATION_DISTANCE EXTRUDER=extruder [DISTANCE=3.846]; Klipper calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
 	<filamentPricesPerKg>0|0|0|0|0|0</filamentPricesPerKg>
 	<filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
   </autoConfigureMaterial>
@@ -320,7 +320,7 @@
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="60"/>
     </temperatureController>
-    <startingGcode>M92 E55 ; calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
+    <startingGcode>M92 E55 ; Marlin calibrate E,SET_EXTRUDER_ROTATION_DISTANCE EXTRUDER=extruder [DISTANCE=3.846]; Klipper calibrate E,M220 S100,M221 S100,T0,G28,M290 Z0.0,G92 E0,G1 E0.1 F100,G92 E0,G1 E15.0 F100,G92 E0,G1 Z0.3 F200</startingGcode>
 	<filamentPricesPerKg>3.11|3.11|3.11|3.11|3.11|3.11</filamentPricesPerKg>
 	<filamentDensities>1.38|1.38|1.38|1.38|1.38|1.38</filamentDensities>
   </autoConfigureMaterial>
