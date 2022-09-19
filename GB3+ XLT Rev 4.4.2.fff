@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="re3D GB3+ XLT Rev 4.4.2" version="2021-10-18 12:02:34" app="S3D-Software 4.1.2">
+<profile name="re3D GB3+ XLT Rev 4.4.2" version="2022-9-16 12:02:34" app="S3D-Software 4.1.2">
   <baseProfile>re3D GB3+ XLT</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Standard Resolution - No Raft</printQuality>
@@ -170,17 +170,17 @@
   <flipYoverride>-1</flipYoverride>
   <flipZoverride>1</flipZoverride>
   <toolheadOffsets>0,0|0,0|0,0|0,0|0,0|0,0</toolheadOffsets>
-  <overrideFirmwareConfiguration>1</overrideFirmwareConfiguration>
+  <overrideFirmwareConfiguration>0</overrideFirmwareConfiguration>
   <firmwareTypeOverride>RepRap (Marlin/Repetier/Sprinter)</firmwareTypeOverride>
   <GPXconfigOverride>r2</GPXconfigOverride>
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M540 S1,M220 S100,M221 S100,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,</startingGcode>
+  <startingGcode>M220 S100,M221 S100,M900 K0.075,SET_PRESSURE_ADVANCE ADVANCE=0.096,M605 S0,G28,G92 E0,</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
-  <toolChangeGcode>{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0 ,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 X1.0 F7200,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 X945 F7200,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
-  <endingGcode>T0,G92 E0,G1 E-3 F200,M104 S0,T1,G92 E0,G1 E-3 F200,M104 S0,M190 S0,G28 XY,M18,M107,</endingGcode>
+  <toolChangeGcode>{IF NEWTOOL=0}M400,{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 Y3 F18000,{IF NEWTOOL=0}G92 E0,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M400,{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 Y3 F18000,{IF NEWTOOL=1}G92 E0,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
+  <endingGcode>T0,G92 E0,M104 S0,T1,G92 E0,M104 S0,M190 S0,G28 X Y,M18,M107,SET_GCODE_OFFSET Z=0,M220 S100,M221 S100,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Funky Town</celebrationSong>
@@ -218,7 +218,7 @@
   <avoidCrossingOutline>1</avoidCrossingOutline>
   <maxMovementDetourFactor>4</maxMovementDetourFactor>
   <toolChangeRetractionDistance>12</toolChangeRetractionDistance>
-  <toolChangeExtraRestartDistance>0.01</toolChangeExtraRestartDistance>
+  <toolChangeExtraRestartDistance>12.01</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>1000</toolChangeRetractionSpeed>
   <externalThinWallType>0</externalThinWallType>
   <internalThinWallType>1</internalThinWallType>
@@ -229,37 +229,15 @@
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
       <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
+    </extruder>
+    <extruder name="Right Extruder">
+      <toolheadNumber>1</toolheadNumber>
+      <extrusionMultiplier>1</extrusionMultiplier>
+      <retractionDistance>0.5</retractionDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -296,42 +274,23 @@
       <setpoint layer="2" speed="100"/>
     </fanSpeed>	
     <defaultSpeed>3600</defaultSpeed>
+	<filamentDensity>1.25</filamentDensity>
+    <filamentPricePerKg>44.09</filamentPricePerKg>
     <outlineOverlapPercentage>22</outlineOverlapPercentage>
     <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
 	<raftSeparationDistance>0.2</raftSeparationDistance>
+	<startingGcode>M220 S100,M221 S100,M900 K0.075,SET_PRESSURE_ADVANCE ADVANCE=0.096,M605 S0,G28,G92 E0,</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="PETG">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
       <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
+    </extruder>
+    <extruder name="Right Extruder">
+      <toolheadNumber>1</toolheadNumber>
+      <extrusionMultiplier>1</extrusionMultiplier>
+      <retractionDistance>0.5</retractionDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -375,43 +334,22 @@
     </fanSpeed>	
     <defaultSpeed>3600</defaultSpeed>
 	<filamentDensity>1.27</filamentDensity>
-    <filamentPricePerKg>77.16</filamentPricePerKg>
+    <filamentPricePerKg>44.09</filamentPricePerKg>
 	<outlineOverlapPercentage>22</outlineOverlapPercentage>
 	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
     <raftSeparationDistance>0.22</raftSeparationDistance>	
+    <startingGcode>M220 S100,M221 S100,M900 K0.075,SET_PRESSURE_ADVANCE ADVANCE=0.205,M605 S0,G28,G92 E0,</startingGcode>
   </autoConfigureMaterial>
     <autoConfigureMaterial name="PC">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
       <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
+    </extruder>
+    <extruder name="Right Extruder">
+      <toolheadNumber>1</toolheadNumber>
+      <extrusionMultiplier>1</extrusionMultiplier>
+      <retractionDistance>0.5</retractionDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -455,44 +393,23 @@
 	  <setpoint layer="7" speed="0"/>
     </fanSpeed>	
     <defaultSpeed>3600</defaultSpeed>
-    <filamentDensity>1.27</filamentDensity>
-    <filamentPricePerKg>44.09</filamentPricePerKg>
+    <filamentDensity>1.19</filamentDensity>
+    <filamentPricePerKg>53.33</filamentPricePerKg>
 	<outlineOverlapPercentage>22</outlineOverlapPercentage>
 	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
 	<raftSeparationDistance>0.34</raftSeparationDistance>
+    <startingGcode>M220 S100,M221 S100,M900 K0.075,SET_PRESSURE_ADVANCE ADVANCE=0.096,M605 S0,G28,G92 E0,</startingGcode>
   </autoConfigureMaterial> 
   <autoConfigureMaterial name="ABS">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
       <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
+    </extruder>
+    <extruder name="Right Extruder">
+      <toolheadNumber>1</toolheadNumber>
+      <extrusionMultiplier>1</extrusionMultiplier>
+      <retractionDistance>0.5</retractionDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -536,43 +453,21 @@
 	  <setpoint layer="7" speed="0"/>
     </fanSpeed>	
     <defaultSpeed>3600</defaultSpeed>
-    <filamentDensity>1.27</filamentDensity>
+    <filamentDensity>1.03</filamentDensity>
     <filamentPricePerKg>44.09</filamentPricePerKg>
 	<outlineOverlapPercentage>22</outlineOverlapPercentage>
 	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   </autoConfigureMaterial> 
   <autoConfigureMaterial name="Taulman 910">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
       <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
+    </extruder>
+    <extruder name="Right Extruder">
+      <toolheadNumber>1</toolheadNumber>
+      <extrusionMultiplier>1</extrusionMultiplier>
+      <retractionDistance>0.5</retractionDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -615,44 +510,23 @@
       <setpoint layer="2" speed="100"/>
     </fanSpeed>	
     <defaultSpeed>3000</defaultSpeed>
-    <filamentDensity>1.19</filamentDensity>
-    <filamentPricePerKg>62.67</filamentPricePerKg>
+    <filamentDensity>1.11</filamentDensity>
+    <filamentPricePerKg>77.14</filamentPricePerKg>
 	<outlineOverlapPercentage>22</outlineOverlapPercentage>
 	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
 	<raftSeparationDistance>0.3</raftSeparationDistance>
+	<startingGcode>M220 S100,M221 S100,M900 K0.075,SET_PRESSURE_ADVANCE ADVANCE=0.096,M605 S0,G28,G92 E0,</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="NinjaTek Cheetah">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>1</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
       <retractionDistance>1</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
+    </extruder>
+    <extruder name="Right Extruder">
+      <toolheadNumber>1</toolheadNumber>
+      <extrusionMultiplier>1</extrusionMultiplier>
+      <retractionDistance>1</retractionDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -695,44 +569,22 @@
       <setpoint layer="2" speed="100"/>
     </fanSpeed>	
     <defaultSpeed>3600</defaultSpeed>
-    <filamentDensity>1.19</filamentDensity>
-    <filamentPricePerKg>85</filamentPricePerKg>
+    <filamentDensity>1.22</filamentDensity>
+    <filamentPricePerKg>80</filamentPricePerKg>
 	<outlineOverlapPercentage>30</outlineOverlapPercentage>
 	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
 	<raftSeparationDistance>0.25</raftSeparationDistance>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="NinjaTek NinjaFlex">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1.25</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>2</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1.25</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
+      <extrusionMultiplier>1.25</extrusionMultiplier>
       <retractionDistance>2</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
+    </extruder>
+    <extruder name="Right Extruder">
+      <toolheadNumber>1</toolheadNumber>
+      <extrusionMultiplier>1.25</extrusionMultiplier>
+      <retractionDistance>2</retractionDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -776,43 +628,22 @@
     </fanSpeed>	
     <defaultSpeed>2400</defaultSpeed>
     <filamentDensity>1.19</filamentDensity>
-    <filamentPricePerKg>85</filamentPricePerKg>
+    <filamentPricePerKg>80</filamentPricePerKg>
 	<outlineOverlapPercentage>50</outlineOverlapPercentage>
 	<infillExtrusionWidthPercentage>110</infillExtrusionWidthPercentage>
 	<raftSeparationDistance>0.25</raftSeparationDistance>
+	<startingGcode>M220 S100,M221 S100,M900 K0.075,SET_PRESSURE_ADVANCE ADVANCE=0.1,M605 S0,G28,G92 E0,</startingGcode>
   </autoConfigureMaterial> 
   <autoConfigureMaterial name="Taulman PCTPE">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>10</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
+      <retractionDistance>0.75</retractionDistance>
+    </extruder>
+    <extruder name="Right Extruder">
+      <toolheadNumber>1</toolheadNumber>
+      <extrusionMultiplier>1</extrusionMultiplier>
+      <retractionDistance>0.75</retractionDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -856,203 +687,22 @@
     </fanSpeed>	
     <defaultSpeed>3000</defaultSpeed>
     <filamentDensity>1.114</filamentDensity>
-    <filamentPricePerKg>110.23</filamentPricePerKg>
+    <filamentPricePerKg>48.57</filamentPricePerKg>
 	<outlineOverlapPercentage>22</outlineOverlapPercentage>
 	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
 	<raftSeparationDistance>0.3</raftSeparationDistance>
+	<startingGcode>M220 S100,M221 S100,M900 K0.075,SET_PRESSURE_ADVANCE ADVANCE=0.096,M605 S0,G28,G92 E0,</startingGcode>
   </autoConfigureMaterial>  
-  <autoConfigureMaterial name="Taulman T-glase">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
+  <autoConfigureMaterial name="HIPS"> 
     <extruder name="Left Extruder">
       <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
       <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
     </extruder>
-    <temperatureController name="Right Extruder">
-      <temperatureNumber>1</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <relayBetweenLayers>0</relayBetweenLayers>
-      <relayBetweenLoops>0</relayBetweenLoops>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="240"/>
-    </temperatureController>
-    <temperatureController name="Left Extruder">
-      <temperatureNumber>0</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <relayBetweenLayers>0</relayBetweenLayers>
-      <relayBetweenLoops>0</relayBetweenLoops>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="240"/>
-    </temperatureController>
-    <temperatureController name="Left Cool">
-      <temperatureNumber>2</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="165"/>	  
-    </temperatureController>
-    <temperatureController name="Right Cool">
-      <temperatureNumber>3</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="165"/>	  
-    </temperatureController>	
-    <temperatureController name="Heated Bed">
-      <temperatureNumber>0</temperatureNumber>
-      <isHeatedBed>1</isHeatedBed>
-      <relayBetweenLayers>0</relayBetweenLayers>
-      <relayBetweenLoops>0</relayBetweenLoops>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="60"/>
-    </temperatureController>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
-    </fanSpeed>	
-    <defaultSpeed>3000</defaultSpeed>
-    <filamentDensity>1.2</filamentDensity>
-    <filamentPricePerKg>77.16</filamentPricePerKg>
-	<outlineOverlapPercentage>22</outlineOverlapPercentage>
-	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
-	<raftSeparationDistance>0.3</raftSeparationDistance>
-  </autoConfigureMaterial>
-  <autoConfigureMaterial name="Taulman Bridge">
     <extruder name="Right Extruder">
       <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
       <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
       <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
-    <extruder name="Left Extruder">
-      <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
-    <temperatureController name="Right Extruder">
-      <temperatureNumber>1</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <relayBetweenLayers>0</relayBetweenLayers>
-      <relayBetweenLoops>0</relayBetweenLoops>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="245"/>
-    </temperatureController>
-    <temperatureController name="Left Extruder">
-      <temperatureNumber>0</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <relayBetweenLayers>0</relayBetweenLayers>
-      <relayBetweenLoops>0</relayBetweenLoops>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="245"/>
-    </temperatureController>
-    <temperatureController name="Left Cool">
-      <temperatureNumber>2</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="165"/>	  
-    </temperatureController>
-    <temperatureController name="Right Cool">
-      <temperatureNumber>3</temperatureNumber>
-      <isHeatedBed>0</isHeatedBed>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="165"/>	  
-    </temperatureController>	
-    <temperatureController name="Heated Bed">
-      <temperatureNumber>0</temperatureNumber>
-      <isHeatedBed>1</isHeatedBed>
-      <relayBetweenLayers>0</relayBetweenLayers>
-      <relayBetweenLoops>0</relayBetweenLoops>
-      <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="60"/>
-    </temperatureController>
-    <fanSpeed>
-      <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
-    </fanSpeed>	
-    <defaultSpeed>3000</defaultSpeed>
-    <filamentDensity>1.19</filamentDensity>
-    <filamentPricePerKg>39.6</filamentPricePerKg>	
-	<outlineOverlapPercentage>22</outlineOverlapPercentage>
-	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
-	<raftSeparationDistance>0.3</raftSeparationDistance>
-  </autoConfigureMaterial>
-  <autoConfigureMaterial name="Taulman 645">
-    <extruder name="Right Extruder">
-      <toolheadNumber>1</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
-    </extruder>
-    <extruder name="Left Extruder">
-      <toolheadNumber>0</toolheadNumber>
-      <diameter>0.4</diameter>
-      <autoWidth>1</autoWidth>
-      <width>0.48</width>
-      <extrusionMultiplier>1</extrusionMultiplier>
-      <useRetract>1</useRetract>
-      <retractionDistance>0.5</retractionDistance>
-      <extraRestartDistance>0</extraRestartDistance>
-      <retractionZLift>0</retractionZLift>
-      <retractionSpeed>1000</retractionSpeed>
-      <useCoasting>0</useCoasting>
-      <coastingDistance>0.0</coastingDistance>
-      <useWipe>0</useWipe>
-      <wipeDistance>5</wipeDistance>
     </extruder>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
@@ -1088,18 +738,18 @@
       <relayBetweenLayers>0</relayBetweenLayers>
       <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="90"/>
+      <setpoint layer="1" temperature="100"/>
     </temperatureController>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
-      <setpoint layer="2" speed="100"/>
     </fanSpeed>	
-    <defaultSpeed>2400</defaultSpeed>
-    <filamentDensity>1.14</filamentDensity>
-    <filamentPricePerKg>77.16</filamentPricePerKg>
+    <defaultSpeed>3000</defaultSpeed>
+    <filamentDensity>1.08</filamentDensity>
+    <filamentPricePerKg>24.97</filamentPricePerKg>	
 	<outlineOverlapPercentage>22</outlineOverlapPercentage>
 	<infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
 	<raftSeparationDistance>0.3</raftSeparationDistance>
+	<startingGcode>M220 S100,M221 S100,M900 K0.075,SET_PRESSURE_ADVANCE ADVANCE=0.1,M605 S0,G28,G92 E0,</startingGcode>
   </autoConfigureMaterial>
   <autoConfigureQuality name="Standard Resolution - No Raft">
     <layerHeight>0.3175</layerHeight>
@@ -1214,15 +864,13 @@
     <primePillarExtruder>999</primePillarExtruder>
     <primePillarWidth>25</primePillarWidth>
     <primePillarLocation>7</primePillarLocation>
-    <primePillarSpeedMultiplier>0.95</primePillarSpeedMultiplier>
     <useOozeShield>0</useOozeShield>
     <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
     <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="off" stabilize="off"/>
     <toggleTemperatureController name="Left Extruder" status="on" stabilize="on"/>
-    <startingGcode>M540 S1,M220 S100,M221 S100,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,</startingGcode>
-    <toolChangeGcode>{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0 ,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 X1.0 F7200,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 X945 F7200,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
+    <toolChangeGcode>{IF NEWTOOL=0}M400,{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 Y3 F18000,{IF NEWTOOL=0}G92 E0,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M400,{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 Y3 F18000,{IF NEWTOOL=1}G92 E0,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
     <temperatureController name="Left Cool">
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
@@ -1248,15 +896,13 @@
     <primePillarExtruder>999</primePillarExtruder>
     <primePillarWidth>25</primePillarWidth>
     <primePillarLocation>7</primePillarLocation>
-    <primePillarSpeedMultiplier>0.95</primePillarSpeedMultiplier>
     <useOozeShield>0</useOozeShield>
     <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
     <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder" status="off" stabilize="off"/>
-    <startingGcode>M540 S1,M220 S100,M221 S100,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,</startingGcode>
-    <toolChangeGcode>{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0 ,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 X1.0 F7200,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 X945 F7200,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
+    <toolChangeGcode>{IF NEWTOOL=0}M400,{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 Y3 F18000,{IF NEWTOOL=0}G92 E0,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M400,{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 Y3 F18000,{IF NEWTOOL=1}G92 E0,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
     <temperatureController name="Left Cool">
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
@@ -1282,15 +928,13 @@
     <primePillarExtruder>999</primePillarExtruder>
     <primePillarWidth>25</primePillarWidth>
     <primePillarLocation>7</primePillarLocation>
-    <primePillarSpeedMultiplier>0.95</primePillarSpeedMultiplier>
     <useOozeShield>0</useOozeShield>
     <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
     <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder" status="on" stabilize="on"/>
-    <startingGcode>M540 S1,M220 S100,M221 S100,M900 K0.075,M605 S0,T0,G28,G92 E0,G1 Z0.3 F200,</startingGcode>
-    <toolChangeGcode>{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0 ,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 X1.0 F7200,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 X945 F7200,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
+    <toolChangeGcode>{IF NEWTOOL=0}M400,{IF NEWTOOL=0}M104 S[extruder3_temperature] T1,{IF NEWTOOL=0}M104 S[extruder0_temperature] T0,{IF NEWTOOL=0}T0,{IF NEWTOOL=0}M106 S0,{IF NEWTOOL=0}G0 Y3 F18000,{IF NEWTOOL=0}G92 E0,{IF NEWTOOL=0}M109 S[extruder0_temperature] T0,{IF NEWTOOL=0}M106 S[fan_speed_pwm],{IF NEWTOOL=1}M400,{IF NEWTOOL=1}M104 S[extruder2_temperature] T0,{IF NEWTOOL=1}M104 S[extruder1_temperature] T1,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}M106 S0,{IF NEWTOOL=1}G0 Y3 F18000,{IF NEWTOOL=1}G92 E0,{IF NEWTOOL=1}M109 S[extruder1_temperature] T1,{IF NEWTOOL=1}M106 S[fan_speed_pwm]</toolChangeGcode>
     <temperatureController name="Left Cool">
       <temperatureNumber>2</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
@@ -1318,15 +962,13 @@
     <primePillarExtruder>999</primePillarExtruder>
     <primePillarWidth>25</primePillarWidth>
     <primePillarLocation>7</primePillarLocation>
-    <primePillarSpeedMultiplier>0.95</primePillarSpeedMultiplier>
     <useOozeShield>0</useOozeShield>
     <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
     <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
     <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder" status="on" stabilize="on"/>
-    <startingGcode>M540 S1,M220 S100,M221 S100,M900 K0.075,T0,G28,G92 E0,G1 Z0.3 F200,M605 S2,</startingGcode>
-    <toolChangeGcode>M605 S2</toolChangeGcode>
+    <toolChangeGcode>M605 S2,DITTO_PRINTING_ENABLE,M104 S[extruder0_temperature] T0,M104 S[extruder1_temperature] T1,</toolChangeGcode>
     <temperatureController name="Right Extruder">
       <temperatureNumber>1</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
